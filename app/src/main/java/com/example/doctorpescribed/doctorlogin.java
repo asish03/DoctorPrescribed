@@ -47,8 +47,6 @@ public class doctorlogin extends AppCompatActivity {
                 drlogin.setEnabled(false);
             }
         }
-//        Intent dctlog = new Intent(this, com.example.doctorpescribed.doctor_nav.class);
-//        startActivity(dctlog);
 
     }
 

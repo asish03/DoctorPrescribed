@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".patient_nav"
+            android:label="@string/title_activity_patient_nav"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".doctor_nav"
             android:label="@string/title_activity_doctor_nav"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".patientlogin"
             android:parentActivityName=".MainActivity" />

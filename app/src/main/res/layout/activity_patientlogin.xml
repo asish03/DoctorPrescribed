@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D8E6C1"
+    android:visibility="visible"
     tools:context=".patientlogin">
 
     <TextView
@@ -25,7 +26,7 @@
         app:layout_constraintVertical_bias="0.024" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/pataadhar"
         android:layout_width="301dp"
         android:layout_height="69dp"
         android:layout_marginTop="16dp"
@@ -36,39 +37,38 @@
         android:inputType="number"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/patdob"
-        android:layout_width="300dp"
-        android:layout_height="66dp"
-        android:autofillHints=""
-        android:background="#B6ECDE"
-        android:ems="10"
-        android:hint="@string/date_of_birth"
-        android:inputType="date"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText"
-        app:layout_constraintVertical_bias="0.016" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
 
     <Button
         android:id="@+id/patloginbtn"
         android:layout_width="210dp"
         android:layout_height="77dp"
+        android:onClick="clkpatientlogin"
         android:text="@string/login"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/patdob"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="@+id/patdob"
-        app:layout_constraintTop_toBottomOf="@+id/patdob"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.813" />
+
+    <EditText
+        android:id="@+id/patdob"
+        android:layout_width="300dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="32dp"
+        android:background="#B6ECDE"
+        android:ems="10"
+        android:hint="Date Of Birth DD/MM/YYYY"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.51" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

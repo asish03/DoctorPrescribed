@@ -28,18 +28,16 @@ import com.example.doctorpescribed.ui.login.LoginViewModelFactory;
 
 class PatientLogin extends AppCompatActivity {
 
-    private LoginViewModel loginViewModel;
-
+//    private LoginViewModel loginViewModel;
+//
 //    @Override
 //    public void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_patientlogins);
-//        loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
-//                .get(LoginViewModel.class);
+//        setContentView(R.layout.activity_patientlogin);
 //
-//        final EditText usernameEditText = findViewById(R.id.username);
-//        final EditText passwordEditText = findViewById(R.id.password);
-//        final Button loginButton = findViewById(R.id.login);
+//         EditText usernameEditText = findViewById(R.id.username);
+//         EditText passwordEditText = findViewById(R.id.password);
+//         Button loginButton = findViewById(R.id.login);
 //        final ProgressBar loadingProgressBar = findViewById(R.id.loading);
 //
 //        loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
