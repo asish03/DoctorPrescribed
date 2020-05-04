@@ -14,7 +14,7 @@
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_patientlogins">Sign in</string>
     <string name="patient_login">Patient Login</string>
-    <!--    <string name="aadhar_number">Aadhar Number</string>-->
+<!--    <string name="aadhar_number">Aadhar Number</string>-->
     <string name="date_of_birth">Date Of Birth</string>
     <string name="login">Login</string>
     <string name="aadhar_number">Aadhar Number</string>
@@ -26,14 +26,9 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-<!--    doctor fragments name-->
     <string name="menu_home">Home</string>
-    <string name="menu_documents">Documents</string>
-    <string name="menu_emergency">Emergency</string>
-    <string name="home_second">Home Second</string>
-
-<!--    patient fragment name-->
-    <string name="title_activity_patient_nav">patient_nav</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
+    <string name="home_second">Home Second</string>
 </resources>
