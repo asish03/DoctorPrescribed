@@ -39,9 +39,14 @@
         app:layout_constraintStart_toStartOf="@+id/textView"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.323"
         android:autofillHints="" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.038" />
+>>>>>>> parent of 9d27d2e... login to patient navigation bar successful
 =======
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.038" />
@@ -66,9 +71,14 @@
         app:layout_constraintStart_toStartOf="@+id/usernametxt"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.534"
         android:autofillHints="" />
+=======
+        app:layout_constraintTop_toBottomOf="@+id/usernametxt"
+        app:layout_constraintVertical_bias="0.029" />
+>>>>>>> parent of 9d27d2e... login to patient navigation bar successful
 =======
         app:layout_constraintTop_toBottomOf="@+id/usernametxt"
         app:layout_constraintVertical_bias="0.029" />
