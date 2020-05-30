@@ -3,16 +3,20 @@ package com.example.doctorpescribed;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class doctorlogin extends AppCompatActivity {
     private Object doctor_nav;
 
-    public void dctloginclk(View view)
+    public void dr_forgot_password(View view)
     {
-        Intent dctlog = new Intent(this,doctor_nav.getClass());
-        startActivity(dctlog);
+        Intent dr_forgt_pass = new Intent(this,dr_password_reset.class);
+        startActivity(dr_forgt_pass);
 
     }
 
@@ -20,10 +24,10 @@ public class doctorlogin extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctorlogin);
+        setContentView(R.layout.activity_doctor_login);
     }
-<<<<<<< HEAD
-    public void dctloginclk(View view)
+//<<<<<<< HEAD
+    public void dctloginclks(View view)
     {
         Button drlogin = (Button)findViewById(R.id.dctloginbtn);
         EditText username = (EditText)findViewById(R.id.usernametxt);
@@ -53,6 +57,6 @@ public class doctorlogin extends AppCompatActivity {
 
     }
 
-=======
->>>>>>> parent of 33867ef... login to doctor navigation bar successful
+//=======
+//>>>>>>> parent of 33867ef... login to doctor navigation bar successful
 }
