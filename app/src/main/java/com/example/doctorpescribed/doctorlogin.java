@@ -20,6 +20,13 @@ public class doctorlogin extends AppCompatActivity {
 
     }
 
+    public void dr_registration(View view)
+    {
+        Intent dr_reg = new Intent(this,dr_registration.class);
+        startActivity(dr_reg);
+
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
