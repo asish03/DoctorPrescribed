@@ -10,7 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class doctorlogin extends AppCompatActivity {
+public class doctorlogin extends AppCompatActivity
+{
     private Object doctor_nav;
 
     public void dr_forgot_password(View view)
@@ -20,9 +21,9 @@ public class doctorlogin extends AppCompatActivity {
 
     }
 
-    public void dr_registration(View view)
+    public void dr_create_account(View view)
     {
-        Intent dr_reg = new Intent(this,doctor_reg.class);
+        Intent dr_reg = new Intent(this,new_ac.class);
         startActivity(dr_reg);
 
     }

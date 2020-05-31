@@ -1,5 +1,6 @@
 package com.example.doctorpescribed;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
@@ -16,9 +17,16 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class doctor_nav extends AppCompatActivity {
+public class doctor_nav extends AppCompatActivity
+{
 
     private AppBarConfiguration mAppBarConfiguration;
+//    public void new_patient(View view)
+//    {
+//        Intent new_pres = new Intent(this,new_prescription.class);
+//        startActivity(new_pres);
+//
+//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +36,14 @@ public class doctor_nav extends AppCompatActivity {
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
-            @Override
+
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+
             }
         });
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each

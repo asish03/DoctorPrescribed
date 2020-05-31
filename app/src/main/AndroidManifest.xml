@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".doctor_reg"></activity>
-        <activity android:name=".dr_password_reset" />
+        <activity android:name=".new_prescription"></activity>
+        <activity
+            android:name=".new_ac"
+            android:parentActivityName=".doctorlogin" />
+        <activity
+            android:name=".dr_password_reset"
+            android:parentActivityName=".doctorlogin" />
         <activity
             android:name=".patient_nav"
             android:label="@string/title_activity_patient_nav"
@@ -24,13 +29,12 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".doctorlogin"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".ui.login.patientlogins"
-            android:label="@string/title_activity_patientlogins" />
-        <activity
-            android:name=".ui.login.doctorlogin"
-            android:label="@string/title_activity_doctorlogin" />
+            android:parentActivityName=".MainActivity" /> <!-- <activity -->
+        <!-- android:name=".ui.login.patientlogins" -->
+        <!-- android:label="@string/title_activity_patientlogins" /> -->
+        <!-- <activity -->
+        <!-- android:name=".ui.login.doctorlogin" -->
+        <!-- android:label="@string/title_activity_doctorlogin" /> -->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
