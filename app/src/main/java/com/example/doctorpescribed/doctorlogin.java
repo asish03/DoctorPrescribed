@@ -22,7 +22,7 @@ public class doctorlogin extends AppCompatActivity {
 
     public void dr_registration(View view)
     {
-        Intent dr_reg = new Intent(this,dr_registration.class);
+        Intent dr_reg = new Intent(this,doctor_reg.class);
         startActivity(dr_reg);
 
     }
