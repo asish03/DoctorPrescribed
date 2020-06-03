@@ -1,5 +1,6 @@
 package com.example.doctorpescribed;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,10 +9,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class doctorlogin extends AppCompatActivity
 {
+    public EditText username,password;
+    Button btnlogin;
+    FirebaseAuth mFirebaseAuth;
+    private  FirebaseAuth.AuthStateListener mAuthlistener;
+
     private Object doctor_nav;
 
     public void dr_forgot_password(View view)
@@ -27,44 +40,73 @@ public class doctorlogin extends AppCompatActivity
         startActivity(dr_reg);
 
     }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_login);
-    }
-//<<<<<<< HEAD
-    public void dctloginclks(View view)
-    {
-        Button drlogin = (Button)findViewById(R.id.dctloginbtn);
-        EditText username = (EditText)findViewById(R.id.usernametxt);
-        EditText password = (EditText)findViewById(R.id.doctorpwdtxt);
-        int counter=3;
-        if(username.getText().toString().equals("Asish") && password.getText().toString().equals("password"))
-        {
-//            correct password body
-            Toast.makeText(this, "Redirecting....", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent( this, doctor_nav.class);
-            startActivity(intent);
-        }else
-        {
-//            wrong password body
-            Toast.makeText(this, "Wrong Credentials..", Toast.LENGTH_SHORT).show();
-            username.setVisibility(View.VISIBLE);
-            username.setBackgroundColor(Color.parseColor("#ff9999"));
-            password.setBackgroundColor(Color.parseColor("#ff9999"));
-            counter--;
-//            username.setText(Integer.toString(counter));
 
-            if (counter == 0)
-            {
-                drlogin.setEnabled(false);
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        username = findViewById(R.id.usernametxt);
+        password = findViewById(R.id.doctorpwdtxt);
+        btnlogin = findViewById(R.id.dctloginbtn);
+        mAuthlistener = new FirebaseAuth.AuthStateListener() {
+
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser mFirebaseUser = mFirebaseAuth.getCurrentUser();
+                if (mFirebaseUser != null) {
+                    Toast.makeText(doctorlogin.this, "You are logged in", Toast.LENGTH_SHORT).show();
+                    Intent i = new Intent(doctorlogin.this, doctor_nav.class);
+                    startActivity(i);
+
+                } else {
+                    Toast.makeText(doctorlogin.this, "Please Login", Toast.LENGTH_SHORT).show();
+                }
             }
-        }
+        };
+        btnlogin.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email=username.getText().toString();
+                String pwd=password.getText().toString();
+                if(email.isEmpty()) {
+                    username.setError("Please enter email id");
+                    username.requestFocus();
+                }
+                else if (pwd.isEmpty()){
+                    password.setError("Please enter your password");
+                    password.requestFocus();
+                }
+                else if (email.isEmpty() && pwd.isEmpty()){
+                    Toast.makeText(doctorlogin.this,"Fields are Empty!",Toast.LENGTH_SHORT);
+                }
+                else if (!(email.isEmpty() && pwd.isEmpty()))
+                {
+                    mFirebaseAuth.signInWithEmailAndPassword(email,pwd).addOnCompleteListener(doctorlogin.this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if (!(task.isSuccessful())){
+                                Toast.makeText(doctorlogin.this, "Login Error, Please Login Again", Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                Intent intToHome = new Intent(doctorlogin.this, doctor_nav.class);
+                                startActivity(intToHome);
+                            }
+                        }
+                    });
+                }
+                else{
+                    Toast.makeText(doctorlogin.this, "Error Occured!", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+        }));
 
     }
-
-//=======
-//>>>>>>> parent of 33867ef... login to doctor navigation bar successful
+    protected void onstart()
+    {
+        super.onStart();
+        mFirebaseAuth.addAuthStateListener(mAuthlistener);
+    }
 }

@@ -14,7 +14,7 @@
         android:gravity="center"
         android:text="@string/password"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText7"
+        app:layout_constraintEnd_toStartOf="@+id/edit_pwd"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -29,7 +29,7 @@
         android:gravity="center"
         android:text="@string/username"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText6"
+        app:layout_constraintEnd_toStartOf="@+id/edit_email"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,20 +44,20 @@
         android:gravity="center"
         android:text="@string/mobile_number"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText5"
+        app:layout_constraintEnd_toStartOf="@+id/edit_mob"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.467" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/edit_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/username"
-        android:inputType="textPersonName"
+        android:inputType="textWebEmailAddress|textPersonName|textEmailSubject"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.858"
@@ -72,14 +72,14 @@
         android:gravity="center"
         android:text="@string/confirm_password"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText9"
+        app:layout_constraintEnd_toStartOf="@+id/edit_cpwd"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.727" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edit_mob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -102,7 +102,7 @@
         android:gravity="center"
         android:text="@string/date_of_birth"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText10"
+        app:layout_constraintEnd_toStartOf="@+id/edit_dob"
         app:layout_constraintHorizontal_bias="0.985"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -115,14 +115,14 @@
         android:gravity="center"
         android:text="@string/department"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@+id/edit_dpt"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.384" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edit_dpt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="0.384" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edit_ln"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -160,7 +160,7 @@
         android:gravity="center"
         android:text="@string/last_name"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText2"
+        app:layout_constraintEnd_toStartOf="@+id/edit_ln"
         app:layout_constraintHorizontal_bias="0.981"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -188,14 +188,14 @@
         android:gravity="center"
         android:text="@string/first_name"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText"
+        app:layout_constraintEnd_toStartOf="@+id/edit_fn"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.128" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_fn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -210,7 +210,7 @@
         app:layout_constraintVertical_bias="0.128" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/edit_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -225,7 +225,7 @@
         app:layout_constraintVertical_bias="0.637" />
 
     <EditText
-        android:id="@+id/editText9"
+        android:id="@+id/edit_cpwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -240,7 +240,7 @@
         app:layout_constraintVertical_bias="0.727" />
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/edit_dob"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -255,7 +255,7 @@
         app:layout_constraintVertical_bias="0.297" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_save"
         android:layout_width="143dp"
         android:layout_height="53dp"
         android:text="@string/save"
