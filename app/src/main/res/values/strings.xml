@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DoctorPrescribed</string>
+    <string name="app_name">Doctorprescribed</string>
     <string name="my_dr_pescribed">My Dr. Prescribed</string>
     <string name="doctor">Doctor</string>
     <string name="patient">Patient</string>
