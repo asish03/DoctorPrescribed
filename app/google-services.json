@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "732643948021",
+    "firebase_url": "https://drprescribedmaster1.firebaseio.com",
+    "project_id": "drprescribedmaster1",
+    "storage_bucket": "drprescribedmaster1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732643948021:android:145dce48ce27aa2fa79cbc",
+        "android_client_info": {
+          "package_name": "com.example.doctorpescribed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732643948021-rih4c3qj76if8rv6bfg0s9qs05jqh566.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doctorpescribed",
+            "certificate_hash": "43c7fae5c6df69d65e02f4fdb1d3cc47e5861f21"
+          }
+        },
+        {
+          "client_id": "732643948021-d9mlmdp9apuuerp253ncic9qa2i789ku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doctorpescribed",
+            "certificate_hash": "d45bbcc9b02f7b8b2b3d51d798e2556b6c459421"
+          }
+        },
+        {
+          "client_id": "732643948021-6h3lg7es3ekov3aegf35av3ki04g2ng9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7IboV6HKMHXbpgEl8H5EW0dpujlErJFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732643948021-6h3lg7es3ekov3aegf35av3ki04g2ng9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
