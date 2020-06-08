@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.doctorpescribed.ui.dr_home.dr_HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_dr_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_emergency"
+            app:destination="@id/nav_emergency" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_documents"
+            app:destination="@id/nav_documents" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.example.doctorpescribed.ui.dr_home.dr_HomeFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_dr_home">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_documents"
+        android:name="com.example.doctorpescribed.ui.dr_document.dr_documentFragment"
+        android:label="@string/menu_documents"
+        tools:layout="@layout/fragment_dr_document" >
+        <action
+            android:id="@+id/action_nav_documents_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_documents_to_nav_emergency"
+            app:destination="@id/nav_emergency" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_emergency"
+        android:name="com.example.doctorpescribed.ui.dr_emergency.dr_emergency"
+        android:label="@string/menu_emergency"
+        tools:layout="@layout/fragment_dr_emergency" >
+        <action
+            android:id="@+id/action_nav_emergency_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_nav_emergency_to_nav_documents"
+            app:destination="@id/nav_documents" />
+    </fragment>
+</navigation>
